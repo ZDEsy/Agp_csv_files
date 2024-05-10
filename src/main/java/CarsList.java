@@ -19,13 +19,13 @@ public class CarsList extends JFrame {
         for(String line : Files.readAllLines(path))
         {
             String[] oneLine = line.split(",");
-            switch (oneLine[1])
+            switch (oneLine[1].toLowerCase())
             {
-                case "Volvo":
+                case "volvo":
                     volvoList.add(new Car(oneLine[0], oneLine[1], oneLine[2], oneLine[3], oneLine[4], Integer.parseInt(oneLine[5]), Double.parseDouble(oneLine[6]), Double.parseDouble(oneLine[7])));
-                case "BMW":
+                case "bmw":
                     bmwList.add(new Car(oneLine[0], oneLine[1], oneLine[2], oneLine[3], oneLine[4], Integer.parseInt(oneLine[5]), Double.parseDouble(oneLine[6]), Double.parseDouble(oneLine[7])));
-                case "Superb":
+                case "superb":
                     superbList.add(new Car(oneLine[0], oneLine[1], oneLine[2], oneLine[3], oneLine[4], Integer.parseInt(oneLine[5]), Double.parseDouble(oneLine[6]), Double.parseDouble(oneLine[7])));
             }
         }
